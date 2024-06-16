@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container:before {
+  content: ""; /* Empty content for pseudo-element */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("./Date-Time-1536x864.jpeg"); /* Background image here */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Adjust opacity here */
+  z-index: -1; /* Ensures background image is behind content */
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+body {
+  background-color: azure;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+  min-height: 100vh;
+}
+.main-para {
+  font-size: large;
+  margin-top: 30px;
+  background-color: rgba(185, 175, 175, 0.3);
+  color: black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  bottom: 0; /* Position it at the bottom */
+  width: 100%;
+  position: relative;
+}
+
+footer .img-fluid {
+  max-width: 150px;
+}
+
+footer h4 {
+  font-weight: bold;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: white;
+  transition: color 0.2s;
+  font-size: large;
+}
+
+footer a:hover {
+  color: #ddd;
+}

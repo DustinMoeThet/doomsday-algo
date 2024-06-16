@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doomsday Algorithm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>The Doomsday Algorithm: A Day for Any Date</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12">
+          <div class="main-para">
+            <p>
+              The Doomsday Algorithm, devised by mathematician John Horton
+              Conway, is a fascinating method for determining the day of the
+              week for any given date. It's a nifty tool that combines
+              mathematical precision with a touch of historical curiosity,
+              making it both a practical and intellectually stimulating
+              exercise.
+            </p>
+            <br />
+            <img src="./maxresdefault.jpg" alt="" class="img-fluid m-3" />
+            <h3 class="mt-3">Understanding the Algorithm</h3>
+            <p>
+              The core idea behind the Doomsday Algorithm is that each year has
+              a "Doomsday" — a specific day of the week that certain dates fall
+              on. Once you know the Doomsday for a given year, you can easily
+              calculate the day of the week for any date in that year. The
+              algorithm consists of a few steps:
+            </p>
+            <img src="./image.jpg" alt="" class="img-fluid m-3" />
+
+            <br />
+            <h3>Anchor Day Calculation:</h3>
+            <p>
+              This is the day of the week for a known Doomsday in a given
+              century. For example, the anchor day for the 1900s is Wednesday,
+              and for the 2000s, it's Tuesday. Yearly Doomsday Calculation:
+              Calculate the Doomsday for the specific year. This involves:
+              Taking the last two digits of the year. Adding the number of times
+              12 fits into those digits. Adding the quotient obtained by
+              dividing the remainder from the previous step by 4. Summing these
+              results and taking the modulus 7 of the sum. Determine the Closest
+              Doomsday: Find a date in the same year that falls on the Doomsday.
+              Notable Doomsdays include: 4/4, 6/6, 8/8, 10/10, and 12/12. For
+              non-leap years: 1/3, 2/28, 3/14, 5/9, 7/11, 9/5, and 11/7. For
+              leap years: 1/4 and 2/29. Calculate the Target Date: Use the known
+              Doomsday and the difference in days to determine the day of the
+              week for the desired date. Example Calculation Let's determine the
+              day of the week for July 4, 2024. Anchor Day for the 2000s:
+              Tuesday. Yearly Doomsday Calculation: Last two digits of the year:
+              24. How many times 12 fits into 24: 24 12 = 2 12 24 ​ =2.
+              Remainder: 24 m o d     12 = 0 24mod12=0. How many times 4 fits
+              into 0: 0 4 = 0 4 0 ​ =0. Sum: 24 + 2 + 0 = 26 24+2+0=26. Modulus
+              7: 26 m o d     7 = 5 26mod7=5. Therefore, the Doomsday for 2024
+              is 5 days after Tuesday, which is Sunday. Closest Doomsday to July
+              4: In a leap year like 2024, July 11 is a Doomsday. Calculate the
+              Target Date: July 11, 2024, is a Sunday. July 4 is 7 days before
+              July 11. Since 7 days before Sunday is also Sunday. So, July 4,
+              2024, is a Sunday.
+            </p>
+            <h3>Applications and Fun Facts</h3>
+            <p>
+              The Doomsday Algorithm isn't just a mathematical curiosity; it has
+              practical applications, such as in calendar design and event
+              planning. It's also a popular party trick for impressing friends
+              with your ability to quickly calculate the day of the week for any
+              date. John Horton Conway, who created the algorithm, was a
+              renowned mathematician known for his work in group theory, number
+              theory, and the creation of the cellular automaton called the Game
+              of Life. His contributions to recreational mathematics have made
+              complex concepts accessible and enjoyable for a broad audience. In
+              summary, the Doomsday Algorithm is a brilliant example of how
+              mathematical patterns can be applied to everyday problems, turning
+              the abstract into the practical and the complex into the
+              manageable. Whether you're a math enthusiast or just curious, it's
+              a fun and useful tool to have in your mental toolbox.
+            </p>
+            <div class="mb-5">
+              <h3>Here is my program created with this algorithm</h3>
+              <form action="">
+                <div class="form-group">
+                  <h4>Input Desired Date</h4>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <label for="day">Input Day</label>
+                      <input
+                        type="number"
+                        id="day"
+                        min="1"
+                        max="31"
+                        class="form-control m-3"
+                      />
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <label for="month">Input Month</label>
+                      <input
+                        type="number"
+                        id="month"
+                        min="1"
+                        max="12"
+                        class="form-control m-3"
+                      />
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <label for="year">Input Year</label>
+                      <input
+                        type="number"
+                        id="year"
+                        min="1"
+                        class="form-control m-3"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="form-control m-3 bg-black text-white w-50 mx-auto"
+                    id="submit"
+                    type="button"
+                  >
+                    Submit
+                  </button>
+                  <div class="container mt-2" id="result-div">
+                    <div class="p-3 bg-white border rounded shadow-sm">
+                      <p class="mb-0" id="result"></p>
+                    </div>
+                  </div>
+                  <div class="container mt-2" id="error-div">
+                    <div
+                      class="p-3 bg-danger text-white border rounded shadow-sm"
+                    >
+                      <p class="mb-0" id="error"></p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Personal Information Section -->
+    <footer class="bg-dark text-white mt-5 py-4">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <img
+              src="./428624735_1086459892396243_5234417371964784976_n (1).jpg"
+              alt="Your Photo"
+              class="img-fluid rounded-circle shadow"
+            />
+          </div>
+          <div class="col-md-9 text-md-start">
+            <h4 class="mb-2">About the Creator</h4>
+            <p class="mb-1">
+              Hello! I'm Moe Thet Nidan, the creator of this Doomsday Algorithm
+              web page. I'm passionate about mathematics and programming, and I
+              love creating tools that make complex concepts accessible and
+              enjoyable. Thank you for visiting!
+            </p>
+            <p class="mb-0">Connect with me:</p>
+            <a href="https://web.facebook.com/dustin.moethet" class="mx-1"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/DustinMoeThet" class="mx-1"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./function.js"></script>
+</html>
