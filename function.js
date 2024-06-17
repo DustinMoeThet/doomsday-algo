@@ -64,7 +64,7 @@ $(document).ready(function() {
                 Math.floor(lastTwoDigits / 12) +
                 (lastTwoDigits % 12) +
                 Math.floor((lastTwoDigits % 12) / 4);
-
+                
             dayOfDoomsday = dayOfDoomsday % 7;
 
             // Check for leap year adjustment
@@ -82,6 +82,9 @@ $(document).ready(function() {
                 actualDay = day - doomsDays[month] + dayOfDoomsday;
             } else {
                 actualDay = dayOfDoomsday - (doomsDays[month] - day);
+            }
+            if(actualDay<-7){
+                actualDay = actualDay%-7
             }
             if (actualDay < 0) {
                 actualDay += 7;
